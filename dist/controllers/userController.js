@@ -20,7 +20,7 @@ exports.login = (req, res) => {
         if (err) {
             res.send(err);
         }
-        if (user.length != 0) {
+        if (user.length !== 0) {
             if (loginDetails.password = user[0].password) {
                 res.send({ message: 'this is the token', status: 200 });
             }
