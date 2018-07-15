@@ -7,19 +7,21 @@ mongoose.connect(uri, (err: any) => {
     if (err) {
         console.log(err.message);
     } else {
-        console.log("Successifully Connected");
+        console.log("Successfully Connected");
     }
 });
 
 export interface IBook extends mongoose.Document {
-    title: string; 
-    author: number; 
-};
+    title: string;
+    author: number;
+}
 
 export const BookSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    author: { type: String, required: true },
+    title: {type: String, required: true},
+    author: {type: String, required: true},
 });
 
+
 const Book = mongoose.model('Book', BookSchema);
+
 export default Book;

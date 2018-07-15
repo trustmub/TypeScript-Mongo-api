@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const book_1 = require("./../book");
 // get all books
 exports.allBooks = (req, res) => {
-    let books = book_1.default.find((err, books) => {
+    book_1.default.find((err, books) => {
         if (err) {
             res.send(err);
         }
@@ -42,7 +42,7 @@ exports.deleteBook = (req, res) => {
             res.send(err);
         }
         else {
-            res.send("Successifuly deleted Book");
+            res.send("Successfully deleted Book");
         }
     });
 };

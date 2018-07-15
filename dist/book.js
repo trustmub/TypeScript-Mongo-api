@@ -7,10 +7,9 @@ mongoose.connect(uri, (err) => {
         console.log(err.message);
     }
     else {
-        console.log("Successifully Connected");
+        console.log("Successfully Connected");
     }
 });
-;
 exports.BookSchema = new mongoose.Schema({
     title: { type: String, required: true },
     author: { type: String, required: true },
